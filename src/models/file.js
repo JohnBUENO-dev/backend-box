@@ -19,7 +19,12 @@ const file = new mongoose.Schema(
  );
  
  file.virtual("url").get(function(){
-   return `http://localhost:3333/files/${encodeURIComponent(this.path)}`;
- }); 
+   //para ter acesso as imagens nas paginas estaticas passasse a variavel de ambiente
+   //process.env.URL para acessar porta liberada no heroku
+   const url = process.env.URL || 'http://localhost:3333';
+
+   return `${url}/files/${encodeURIComponent(this.path)}`;
+ 
+  }); 
 
  module.exports = mongoose.model("file",file);

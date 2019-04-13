@@ -15,6 +15,9 @@ const app = express();
 //git push -u origin master
 // criar arquivo .gitkeep 
 //
+
+//git add .    //toda a aplicação  
+//git status para ver o que ainda não foi adicionado novo no repositorio
 //git config --global user.email "stevewolfjp@hotmail.com"
 //git config --global user.name "Your Name"
 
@@ -51,8 +54,8 @@ app.use("/files", express.static(path.resolve(__dirname, "..","tmp")));
 
 app.use(require("./routes"));
 
-
-app.listen(3333);
+//variavel de ambiente para executar a porta de forma que o heroku possa acessar a porta
+app.listen(process.env.PORT || 3333); //acessa a porta que estiver liberado ou a porta 3333
 
 //add cors para determinar quem pode acessar a aplicação yarn add cors
 //deixar a aplicação real time instalando yarn add socket.io
