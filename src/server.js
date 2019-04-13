@@ -59,3 +59,20 @@ app.listen(process.env.PORT || 3333); //acessa a porta que estiver liberado ou a
 
 //add cors para determinar quem pode acessar a aplicação yarn add cors
 //deixar a aplicação real time instalando yarn add socket.io
+/*
+
+If you use npm:
+
+git rm yarn.lock
+git commit -m "Remove yarn lock file"
+git push heroku master
+
+/*
+/*
+If you use yarn:
+
+git rm package-lock.json
+git commit -m "Remove npm lock file"
+git push heroku master
+
+*/
