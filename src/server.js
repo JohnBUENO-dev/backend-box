@@ -53,9 +53,9 @@ app.use(express.urlencoded({extended:true}));
 app.use("/files", express.static(path.resolve(__dirname, "..","tmp")));
 
 app.use(require("./routes"));
-
+var port = process.env.PORT || 8080;
 //variavel de ambiente para executar a porta de forma que o heroku possa acessar a porta
-app.listen(process.env.PORT || 8080); //acessa a porta que estiver liberado ou a porta 3333
+app.listen(port); //acessa a porta que estiver liberado ou a porta 3333 || 8080
 
 //add cors para determinar quem pode acessar a aplicação yarn add cors
 //deixar a aplicação real time instalando yarn add socket.io
@@ -75,4 +75,10 @@ git rm package-lock.json
 git commit -m "Remove npm lock file"
 git push heroku master
 
+
+instalando heroku na aplicação via npm
+npm install -g heroku
+
+
+heroku login
 */
