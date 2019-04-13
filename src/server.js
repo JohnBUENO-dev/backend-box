@@ -53,8 +53,9 @@ app.use(express.urlencoded({extended:true}));
 app.use("/files", express.static(path.resolve(__dirname, "..","tmp")));
 
 app.use(require("./routes"));
-var port = process.env.PORT || 8080;
+var port = process.env.PORT;
 //variavel de ambiente para executar a porta de forma que o heroku possa acessar a porta
+console.log("API rodando na porta: " + port);
 app.listen(port); //acessa a porta que estiver liberado ou a porta 3333 || 8080
 
 //add cors para determinar quem pode acessar a aplicação yarn add cors
