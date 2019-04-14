@@ -5,7 +5,7 @@ const multerconfig = require('./config/multer');
 const routes = express.Router();
 
 const BoxController = require('./controllers/boxcontroller');
-const FileController = require("./controllers/fileController");
+const FileController = require("./controllers/filecontroller");
 
 
 //get post delete put
