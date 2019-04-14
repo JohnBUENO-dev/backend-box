@@ -82,4 +82,12 @@ npm install -g heroku
 
 
 heroku login
+
+resolvendo problemas 
+
+npm install -g lodash
+
+rm -rf node_modules
+npm install
+
 */
