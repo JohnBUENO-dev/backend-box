@@ -5,9 +5,7 @@ const cors = require('cors');
 
 const app = express();
 //aqui eu defino que todo mundo pode acessar minha aplicação de qualquer dominio
-//heroku
-//cyberpunk2077_ senha 
-//https://github.com/johnpaulwynow/backend-box.git
+
 //git init
 //git add README.md
 //git commit -m "first commit"
@@ -18,7 +16,7 @@ const app = express();
 
 //git add .    //toda a aplicação  
 //git status para ver o que ainda não foi adicionado novo no repositorio
-//git config --global user.email "stevewolfjp@hotmail.com"
+//git config --global user.email "xxxxx"
 //git config --global user.name "Your Name"
 
 app.use(cors());
@@ -34,7 +32,7 @@ io.on("connection", socket =>{
 })
 
 //requisições do tipo http e socket oks
-mongoose.connect("mongodb+srv://john:cyberpunk@cluster0-dhda7.mongodb.net/test?retryWrites=true",
+mongoose.connect("mongodb+srv://john:xxx@cluster0-dhda7.mongodb.net/test?retryWrites=true",
 {
    useNewUrlParser: true
 }
